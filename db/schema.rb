@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_21_123642) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_21_124520) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,16 +25,26 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_21_123642) do
   end
 
   create_table "time_travels", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.text "description"
-    t.decimal "price_per_day"
-    t.bigint "time_period_id", null: false
+    t.string "period"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["time_period_id"], name: "index_time_travels_on_time_period_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "bookings", "time_travels"
-  add_foreign_key "famous_people", "time_periods"
-  add_foreign_key "time_travels", "time_periods"
 end
