@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background:#4A4A4A;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,26 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+
+}
+.navbar-lewagon .nav-link {
+  color: #FFFFFF;
+}
+
+.navbar-lewagon .navbar-brand {
+  color: #FFFFFF;
+}
+
+/* Ensure the navbar is fixed at the top of the page */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar is on top of other content */
+}
+
+/* Add some padding to the body to prevent content from being hidden behind the navbar */
+body {
+  padding-top: 56px; /* Adjust based on the height of your navbar */
 }
