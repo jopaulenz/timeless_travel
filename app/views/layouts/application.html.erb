@@ -13,12 +13,15 @@
   <body>
     <!-- Navbar -->
     <div class="navbar-container">
-      <%= render "shared/navbar" %>
+      <%= render "components/navbar" %>
     </div>
 
     <!-- Main Content -->
     <div class="page-container">
       <%= yield %>
+    </div>
+    <div class="footer-container">
+      <%= render "components/footer" %>
     </div>
   </body>
 </html>
