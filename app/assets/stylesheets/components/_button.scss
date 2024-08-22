@@ -10,7 +10,7 @@
 .info-button {
   background-color: #DE4747;
   border-radius: 8px;
-  width: 300px;
+  width: 400px;
   height: 48px;
   font-family: "Raleway", sans-serif;
   color: #FEFEFC;
@@ -19,4 +19,16 @@
 }
 .info-button :hover {
   background-color: #b12020;
+}
+.booking-button {
+  background-color: #DE4747;
+  border-radius: 8px;
+  width: 500px;
+  height: 48px;
+  font-family: "Raleway", sans-serif;
+  color: #FEFEFC;
+  text-align: center;
+  padding-top: 10px;
+  border: none;
+  margin-bottom: 10px;
 }

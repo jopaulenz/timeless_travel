@@ -13,13 +13,30 @@ h1 {
   color: #DE4747;
   font-size: 88px;
 }
+h3 {
+
+  font-family: "Raleway", sans-serif;;
+  color: #585151;
+  font-size: 32px;
+
+}
+h2 {
+
+  font-family: 'Pages Grotesque Demo', sans-serif;
+  color: #585151;
+  font-size: 60px;
+}
 
 .container {
-  max-width: 1200px; /* Adjust according to your design */
+  max-width: 1400px; /* Adjust according to your design */
   margin: 0 auto; /* Center the container */
   padding: 0 15px;
+  margin-top: 60px;
 }
 
 .card {
   border-radius: 20px;
+}
+p {
+  font-family: "Raleway", sans-serif;;
 }
