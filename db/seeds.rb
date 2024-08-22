@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-<<<<<<< HEAD
+
 time_travels = [
   {
     name: "Socrates in Athens",
@@ -203,12 +203,14 @@ time_travels.each do |travel|
     price: travel[:price],
     rating: travel[:rating],
     image_url: travel[:image_url]
-=======
+  )
+end
+
 10.times do
   TimeTravels.create!(
     name: Faker::Name.name, # Verwende Faker::Name.name falls Faker::HistoricalFigure.name nicht funktioniert
     description: Faker::Lorem.paragraph,
     period: Faker::Date.between(from: '1300-01-01', to: '2000-01-01').strftime("%B %Y")
->>>>>>> 4ab89fcc02ac7e830e7d65d1df6f9f02185c7b40
+
   )
 end
