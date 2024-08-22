@@ -11,8 +11,47 @@
 @import "components/index";
 @import "pages/index";
 
+<<<<<<< HEAD
 @import url('https://fonts.cdnfonts.com/css/pages-grotesque-demo')
 
 
 
 
+=======
+
+
+.navbar-container {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-nav .nav-link {
+  margin-left: 15px;
+  color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+
+.page-container {
+  padding-top: 60px;
+}
+>>>>>>> 6cb5e30df28bca03dd5db9eecbd77c6fa185fba2
