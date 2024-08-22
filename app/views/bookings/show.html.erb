@@ -19,6 +19,7 @@
 
 <%= link_to 'Back to Time Travels', time_travels_path %>
 
-<%= form_with(model: [@booking.time_travel, @booking], method: :delete, data: { confirm: 'Are you sure?' }) do %>
-  <%= submit_tag 'Delete Booking', data: { confirm: 'Are you sure you want to delete this booking?' } %>
-<% end %>
+ <%= link_to "Delete",
+    booking_path(@booking),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>

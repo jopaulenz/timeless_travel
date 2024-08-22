@@ -4,13 +4,15 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy]
 
   def new
-    @booking = @time_travel.bookings.new
+    @booking = Booking.new
   end
 
   def create
-    @booking = @time_travel.bookings.new(booking_params)
+    @booking = Booking.new(booking_params)
+    @booking.time_travel = @time_travel
+    @booking.user = current_user
     if @booking.save
-      redirect_to time_travel_booking_path(@time_travel, @booking), notice: 'Booking was successfully created.'
+      redirect_to booking_path(@booking), notice: 'Booking was successfully created.'
     else
       render :new
     end
@@ -31,7 +33,7 @@ class BookingsController < ApplicationController
   end
 
   def set_time_travel
-    @time_travel = TimeTravels.find(params[:time_travels_id])
+    @time_travel = TimeTravel.find(params[:time_travel_id])
   end
 
   def booking_params

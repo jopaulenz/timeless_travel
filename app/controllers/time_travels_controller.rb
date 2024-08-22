@@ -1,9 +1,9 @@
 class TimeTravelsController < ApplicationController
   def index
-    @time_travels = TimeTravels.all
+    @time_travels = TimeTravel.all
   end
 
   def show
-    @time_travel = TimeTravels.find(params[:id])
+    @time_travel = TimeTravel.find(params[:id])
   end
 end

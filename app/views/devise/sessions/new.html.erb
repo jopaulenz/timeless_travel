@@ -1,6 +1,19 @@
 <h2>Log in</h2>
+<link href="https://fonts.cdnfonts.com/css/pages-grotesque-demo" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="header">
+  <div class="d-flex justify-content-center align-items-center vh-50">
+    <%= image_tag "logo_login.svg" %>
+  </div>
+<h1>WELCOME TO TIMELESS TRAVEL</h1>
+</div>
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
@@ -16,5 +29,7 @@
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
-
+            </div>
+        </div>
+    </div>
 <%= render "devise/shared/links" %>
