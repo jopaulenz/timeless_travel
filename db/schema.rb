@@ -15,13 +15,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_22_110554) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.bigint "time_travel_id", null: false
+    t.integer "price"
+    t.string "period"
+    t.boolean "status"
     t.date "start_date"
     t.date "end_date"
-    t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["time_travel_id"], name: "index_bookings_on_time_travel_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "time_travels", force: :cascade do |t|
@@ -54,4 +58,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_22_110554) do
   end
 
   add_foreign_key "bookings", "time_travels"
+  add_foreign_key "bookings", "users"
 end

@@ -1,5 +1,5 @@
 # app/controllers/booking_controller.rb
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
   def select_dates
     @time_travel = TimeTravels.find(params[:id])
   end
