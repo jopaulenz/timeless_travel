@@ -1,0 +1,13 @@
+.card {
+  border-radius: 20px;
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  min-height: 450px;
+  flex-grow: 1;
+}
+.card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 200px;
+  object-fit: cover;
+}
