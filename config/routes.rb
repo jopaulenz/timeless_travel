@@ -10,8 +10,6 @@ Rails.application.routes.draw do
 
   # Time travel routes
   resources :time_travels, only: [:index, :show] do
-    member do
-      get 'book', to: 'booking#select_dates'
-    end
+    resources :bookings, only: [:new, :show, :create, :destroy]
   end
 end
