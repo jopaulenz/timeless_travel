@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :destroy] 
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
   before_action :set_time_travel, only: [:new, :create]
   before_action :set_booking, only: [:show, :destroy]
 
@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
   end
 
   def set_time_travel
-    @time_travel = TimeTravel.find(params[:time_travel_id])
+    @time_travel = TimeTravels.find(params[:time_travel_id])
   end
 
   def booking_params
