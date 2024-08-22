@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # Health check route
   devise_for :users
-  root to: "pages#home"
+  devise_scope :user do
+  root to: "devise/sessions#new"
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -10,8 +12,7 @@ Rails.application.routes.draw do
 
   # Time travel routes
   resources :time_travels, only: [:index, :show] do
-    member do
-      get 'book', to: 'booking#select_dates'
-    end
+    resources :bookings, only: [:new, :create]
   end
+  resources :bookings, only: [:show, :destroy]
 end

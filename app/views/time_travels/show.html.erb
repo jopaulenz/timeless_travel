@@ -1,20 +1,55 @@
+<div class="container">
 <div class="row">
   <div class="col-md-6">
     <img src="<%= @time_travel.image_url %>" class="img-fluid" alt="<%= @time_travel.name %>">
   </div>
   <div class="col-md-6">
-    <h1><%= @time_travel.name %></h1>
-    <p><%= @time_travel.description %></p>
-    <p>Period: <%= @time_travel.period %></p>
-    <p>
+    <h2><%= @time_travel.name %></h2>
+    <br>
+    <div class="rate-price">
       <i class="fas fa-dollar-sign"></i> <%= @time_travel.price %>
       <span class="float-end"><i class="fas fa-star"></i> <%= @time_travel.rating %></span>
-    </p>
-    <a href="<%= select_dates_booking_path(@time_travel) %>" class="btn btn-primary">Book this time travel</a>
+    </div>
+    <br>
+    <a href="<%= new_time_travel_booking_path(@time_travel) %>" class="btn booking-button">Book this time travel</a>
+    <br>
+    <h3>When you will be</h3>
+    <p><%= @time_travel.period %></p>
+    <h3>What will you do</h3>
+    <p><%= @time_travel.description %></p>
+    <div class="mt-4 map">
+      <h3>Where you will be</h3>
+      <br>
+      <!-- Map Container -->
+      <div id='map' style='width: 100%; height: 400px;' class="map-container"></div>
+    </div>
+    <br>
+  </div>
   </div>
 </div>
 
-<div class="mt-4">
-  <h2>Location</h2>
-  <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{@time_travel.city},#{@time_travel.latitude},#{@time_travel.longitude},10/600x300?access_token=pk.eyJ1IjoiZWJldHVyayIsImEiOiJjbHo5bXN4eTMwY3g0MnFwamFpMHg2OWJ3In0.Ydo4NwfJpB2HimOC98ckCg", class: "img-fluid" %>
-</div>
+
+<!-- Initialize Mapbox Map -->
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWJldHVyayIsImEiOiJjbHo5bXN4eTMwY3g0MnFwamFpMHg2OWJ3In0.Ydo4NwfJpB2HimOC98ckCg';
+  var map = new mapboxgl.Map({
+    container: 'map', // ID of the container where the map will be displayed
+    style: 'mapbox://styles/mapbox/streets-v11', // Mapbox style URL
+    center: [<%= @time_travel.longitude %>, <%= @time_travel.latitude %>], // Longitude, Latitude
+    zoom: 10 // Initial zoom level
+  });
+
+  // Add a marker at the specified coordinates
+  new mapboxgl.Marker()
+    .setLngLat([<%= @time_travel.longitude %>, <%= @time_travel.latitude %>])
+    .addTo(map);
+
+  // Optionally, add navigation controls (zoom and rotation)
+  map.addControl(new mapboxgl.NavigationControl());
+
+  // Optionally, add a popup with information about the location
+  new mapboxgl.Marker()
+    .setLngLat([<%= @time_travel.longitude %>, <%= @time_travel.latitude %>])
+    .setPopup(new mapboxgl.Popup().setHTML("<h4><%= @time_travel.name %></h4><p><%= @time_travel.description %></p>"))
+    .addTo(map);
+</script>

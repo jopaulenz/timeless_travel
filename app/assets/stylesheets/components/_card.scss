@@ -1,0 +1,32 @@
+.card {
+  border-radius: 20px;
+  font-family: "Raleway", sans-serif;
+  height: auto;
+  min-height: 450px;
+  flex-grow: 1;
+}
+.card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.map-container {
+  border-radius: 20px;
+}
+.map{
+  width: 700px;
+}
+.img-fluid {
+  width: 800px;
+  border-radius: 20px;
+  min-height: 900px;
+  object-fit: cover;
+
+}
+.rate-price {
+  width: 450px;
+  font-size: larger;
+  font-family: "Raleway", sans-serif;
+}
