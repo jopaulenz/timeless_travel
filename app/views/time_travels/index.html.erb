@@ -1,0 +1,9 @@
+<h1>Available Time Travels</h1>
+<ul>
+  <% @time_travels.each do |travel| %>
+    <li>
+      <a href="<%= time_travel_path(travel) %>"><%= travel.name %></a>
+      - <%= travel.period %>
+    </li>
+  <% end %>
+</ul>
