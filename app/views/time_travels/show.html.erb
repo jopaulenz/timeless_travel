@@ -14,7 +14,33 @@
   </div>
 </div>
 
+<!-- Map Container -->
 <div class="mt-4">
   <h2>Location</h2>
-  <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{@time_travel.city},#{@time_travel.latitude},#{@time_travel.longitude},10/600x300?access_token=pk.eyJ1IjoiZWJldHVyayIsImEiOiJjbHo5bXN4eTMwY3g0MnFwamFpMHg2OWJ3In0.Ydo4NwfJpB2HimOC98ckCg", class: "img-fluid" %>
+  <div id='map' style='width: 100%; height: 400px;'></div>
 </div>
+
+<!-- Initialize Mapbox Map -->
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWJldHVyayIsImEiOiJjbHo5bXN4eTMwY3g0MnFwamFpMHg2OWJ3In0.Ydo4NwfJpB2HimOC98ckCg';
+  var map = new mapboxgl.Map({
+    container: 'map', // ID of the container where the map will be displayed
+    style: 'mapbox://styles/mapbox/streets-v11', // Mapbox style URL
+    center: [<%= @time_travel.longitude %>, <%= @time_travel.latitude %>], // Longitude, Latitude
+    zoom: 10 // Initial zoom level
+  });
+
+  // Add a marker at the specified coordinates
+  new mapboxgl.Marker()
+    .setLngLat([<%= @time_travel.longitude %>, <%= @time_travel.latitude %>])
+    .addTo(map);
+
+  // Optionally, add navigation controls (zoom and rotation)
+  map.addControl(new mapboxgl.NavigationControl());
+
+  // Optionally, add a popup with information about the location
+  new mapboxgl.Marker()
+    .setLngLat([<%= @time_travel.longitude %>, <%= @time_travel.latitude %>])
+    .setPopup(new mapboxgl.Popup().setHTML("<h4><%= @time_travel.name %></h4><p><%= @time_travel.description %></p>"))
+    .addTo(map);
+</script>

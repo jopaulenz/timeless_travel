@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
   end
 
   def set_time_travel
-    @time_travel = TimeTravels.find(params[:time_travel_id])
+    @time_travel = TimeTravels.find(params[:time_travels_id])
   end
 
   def booking_params
