@@ -13,3 +13,13 @@ h1 {
   color: #DE4747;
   font-size: 88px;
 }
+
+.container {
+  max-width: 1200px; /* Adjust according to your design */
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px;
+}
+
+.card {
+  border-radius: 20px;
+}
