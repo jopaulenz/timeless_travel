@@ -1,4 +1,21 @@
-<h1><%= @time_travel.name %></h1>
-<p><%= @time_travel.description %></p>
-<p>Period: <%= @time_travel.period %></p>
-<%= link_to 'Book this time travel', new_time_travel_booking_path(@time_travel) %>
+<div class="row">
+  <div class="col-md-6">
+    <img src="<%= @time_travel.image_url %>" class="img-fluid" alt="<%= @time_travel.name %>">
+  </div>
+  <div class="col-md-6">
+    <h1><%= @time_travel.name %></h1>
+    <p><%= @time_travel.description %></p>
+    <p>Period: <%= @time_travel.period %></p>
+    <p>
+      <i class="fas fa-dollar-sign"></i> <%= @time_travel.price %>
+      <span class="float-end"><i class="fas fa-star"></i> <%= @time_travel.rating %></span>
+    </p>
+    <a href="<%= select_dates_booking_path(@time_travel) %>" class="btn btn-primary">Book this time travel</a>
+  </div>
+</div>
+
+<div class="mt-4">
+  <h2>Location</h2>
+  <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{@time_travel.city},#{@time_travel.latitude},#{@time_travel.longitude},10/600x300?access_token=pk.eyJ1IjoiZWJldHVyayIsImEiOiJjbHo5bXN4eTMwY3g0MnFwamFpMHg2OWJ3In0.Ydo4NwfJpB2HimOC98ckCg", class: "img-fluid" %>
+</div>
+
