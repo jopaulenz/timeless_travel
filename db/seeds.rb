@@ -7,7 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-<<<<<<< HEAD
 time_travels = [
   {
     name: "Socrates in Athens",
@@ -19,7 +18,7 @@ time_travels = [
     detailed_description: "Discover the profound teachings of Socrates, his method of questioning, and his influence on Western philosophy.",
     price: 3000,
     rating: 4.9,
-    image_url: "https://source.unsplash.com/600x400/?athens"
+    image_url: "https://plus.unsplash.com/premium_photo-1661911756283-fd0fbefee201?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Julius Caesar in Rome",
@@ -31,7 +30,7 @@ time_travels = [
     detailed_description: "Experience the political maneuvers, military campaigns, and the eventual assassination that marked Caesar's life.",
     price: 3200,
     rating: 4.8,
-    image_url: "https://source.unsplash.com/600x400/?rome"
+    image_url: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=2896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Confucius in Qufu",
@@ -43,7 +42,7 @@ time_travels = [
     detailed_description: "Understand Confucius' philosophy on ethics, family, and governance that shaped Chinese culture.",
     price: 2900,
     rating: 4.7,
-    image_url: "https://source.unsplash.com/600x400/?qufu"
+    image_url: "https://plus.unsplash.com/premium_photo-1697730111898-17d08693dca8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Al-Farabi in Baghdad",
@@ -55,7 +54,7 @@ time_travels = [
     detailed_description: "Explore the philosophical and scientific advancements during the Abbasid Caliphate.",
     price: 3100,
     rating: 4.8,
-    image_url: "https://source.unsplash.com/600x400/?baghdad"
+    image_url: "https://plus.unsplash.com/premium_photo-1699531223990-856f23c13e43?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Leonardo da Vinci in Florence",
@@ -67,7 +66,7 @@ time_travels = [
     detailed_description: "Witness da Vinci's works in art, science, and engineering in the vibrant city of Florence.",
     price: 3500,
     rating: 5.0,
-    image_url: "https://source.unsplash.com/600x400/?florence"
+    image_url: "https://plus.unsplash.com/premium_photo-1676288635850-cd91d5b2a3af?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Rumi in Konya",
@@ -79,7 +78,7 @@ time_travels = [
     detailed_description: "Understand Rumi's poetry and spiritual teachings that continue to inspire millions.",
     price: 2800,
     rating: 4.9,
-    image_url: "https://source.unsplash.com/600x400/?konya"
+    image_url: "https://plus.unsplash.com/premium_photo-1694475128245-999b1ae8a44e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Genghis Khan in Karakorum",
@@ -91,7 +90,7 @@ time_travels = [
     detailed_description: "Learn about the military strategies and governance that led to the rise of the largest contiguous empire in history.",
     price: 3300,
     rating: 4.7,
-    image_url: "https://source.unsplash.com/600x400/?mongolia"
+    image_url: "https://plus.unsplash.com/premium_photo-1697729672472-abd2ae5bcd63?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Thomas Jefferson in Philadelphia",
@@ -103,7 +102,7 @@ time_travels = [
     detailed_description: "Explore Jefferson's role in drafting the Declaration of Independence and his vision for the United States.",
     price: 3600,
     rating: 4.8,
-    image_url: "https://source.unsplash.com/600x400/?philadelphia"
+    image_url: "https://images.unsplash.com/photo-1566832957638-dab4c15d1cd7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Ibn Sina in Bukhara",
@@ -115,7 +114,7 @@ time_travels = [
     detailed_description: "Delve into the contributions of Ibn Sina, known in the West as Avicenna, to medicine and philosophy.",
     price: 3200,
     rating: 4.9,
-    image_url: "https://source.unsplash.com/600x400/?bukhara"
+    image_url: "https://images.unsplash.com/photo-1662468752704-f256cf5c6784?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "William Shakespeare in London",
@@ -127,7 +126,7 @@ time_travels = [
     detailed_description: "See Shakespeare's plays performed at the Globe Theatre and explore his influence on English literature.",
     price: 3400,
     rating: 5.0,
-    image_url: "https://source.unsplash.com/600x400/?london"
+    image_url: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Akbar the Great in Agra",
@@ -139,7 +138,7 @@ time_travels = [
     detailed_description: "Learn about Akbar's policies of religious tolerance and his efforts to consolidate the Mughal Empire.",
     price: 3100,
     rating: 4.7,
-    image_url: "https://source.unsplash.com/600x400/?agra"
+    image_url: "https://plus.unsplash.com/premium_photo-1661885523029-fc960a2bb4f3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Suleiman the Magnificent in Istanbul",
@@ -151,7 +150,7 @@ time_travels = [
     detailed_description: "Understand Suleiman's military conquests, legal reforms, and cultural patronage that marked the Ottoman golden age.",
     price: 3300,
     rating: 4.8,
-    image_url: "https://source.unsplash.com/600x400/?istanbul"
+    image_url: "https://plus.unsplash.com/premium_photo-1661962550248-59cf249e078b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Sun Yat-sen in Guangzhou",
@@ -163,7 +162,7 @@ time_travels = [
     detailed_description: "Explore Sun Yat-sen's efforts to overthrow the Qing Dynasty and establish the Republic of China.",
     price: 3000,
     rating: 4.8,
-    image_url: "https://source.unsplash.com/600x400/?guangzhou"
+    image_url: "https://plus.unsplash.com/premium_photo-1715098650323-3b2dad3ab8f7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "George Washington in Mount Vernon",
@@ -175,7 +174,7 @@ time_travels = [
     detailed_description: "Learn about Washington's leadership during the American Revolution and his role as the first President.",
     price: 3700,
     rating: 4.9,
-    image_url: "https://source.unsplash.com/600x400/?mountvernon"
+    image_url: "https://images.unsplash.com/photo-1653660224153-d201b994df6e?q=80&w=2739&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "Tokugawa Ieyasu in Edo",
@@ -187,7 +186,7 @@ time_travels = [
     detailed_description: "Discover how Tokugawa Ieyasu established the shogunate and ushered in an era of peace and stability.",
     price: 3400,
     rating: 4.7,
-    image_url: "https://source.unsplash.com/600x400/?tokyo"
+    image_url: "https://images.unsplash.com/photo-1554797589-7241bb691973?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
 
@@ -203,12 +202,5 @@ time_travels.each do |travel|
     price: travel[:price],
     rating: travel[:rating],
     image_url: travel[:image_url]
-=======
-10.times do
-  TimeTravels.create!(
-    name: Faker::Name.name, # Verwende Faker::Name.name falls Faker::HistoricalFigure.name nicht funktioniert
-    description: Faker::Lorem.paragraph,
-    period: Faker::Date.between(from: '1300-01-01', to: '2000-01-01').strftime("%B %Y")
->>>>>>> 4ab89fcc02ac7e830e7d65d1df6f9f02185c7b40
   )
 end
