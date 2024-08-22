@@ -1,5 +1,3 @@
-
-
 .navbar {
   justify-content: space-between;
   background: white;
@@ -17,4 +15,8 @@
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
   padding: 0px;
+}
+.logofont {
+  font-family: 'Pages Grotesque Demo', sans-serif;
+  color: #DE4747;
 }
