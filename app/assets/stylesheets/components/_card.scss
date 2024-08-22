@@ -4,6 +4,8 @@
   height: auto;
   min-height: 450px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .card img {
   border-top-left-radius: 20px;
@@ -26,9 +28,10 @@
 
 }
 .rate-price {
-  width: 650px;
-  font-size: 30px;
-  color: #585151;
+  width: 550px;
+  font-size: 26px;
+  color: #DE4747;
   font-family: "Raleway", sans-serif;
+  padding-left: 100px;
 
 }
