@@ -1,0 +1,27 @@
+<h1>Available Time Travels</h1>
+
+<div class="row">
+  <% @time_travels.each do |travel| %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <%= link_to time_travel_path(travel) do %>
+          <img src="<%= travel.image_url %>" class="card-img-top" alt="<%= travel.name %>">
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= travel.name %></h5>
+          <p class="card-text">
+            <i class="fas fa-dollar-sign"></i> <%= travel.price %>
+            <span class="float-end"><i class="fas fa-star"></i> <%= travel.rating %></span>
+          </p>
+          <p><%= travel.description %></p>
+          <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#description-<%= travel.id %>" aria-expanded="false" aria-controls="description-<%= travel.id %>">
+            More information
+          </button>
+          <div class="collapse mt-2" id="description-<%= travel.id %>">
+            <p class="card-text"><%= travel.detailed_description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
