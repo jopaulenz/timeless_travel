@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_22_110554) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
+<<<<<<< HEAD
     t.bigint "user_id", null: false
     t.bigint "time_travel_id", null: false
     t.integer "price"
@@ -22,6 +23,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_22_110554) do
     t.boolean "status"
     t.date "start_date"
     t.date "end_date"
+=======
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.bigint "time_travel_id", null: false
+    t.integer "price"
+    t.string "period"
+    t.boolean "status"
+>>>>>>> 36b6cc50b3f37c8b9b6b1d3da497f43f602e7a51
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["time_travel_id"], name: "index_bookings_on_time_travel_id"
