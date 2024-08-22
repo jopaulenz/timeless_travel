@@ -1,10 +1,9 @@
 class TimeTravelsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @time_travels = TimeTravels.all
+    @time_travels = TimeTravel.all
   end
 
   def show
-    @time_travel = TimeTravels.find(params[:id])
+    @time_travel = TimeTravel.find(params[:id])
   end
 end
