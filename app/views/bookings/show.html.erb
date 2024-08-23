@@ -1,7 +1,8 @@
-<!-- app/views/bookings/show.html.erb -->
+
 <div class="container">
 <h1>Booking Details</h1>
   <div class="back">
+
 <%= link_to '<- Back to Time Travels', time_travels_path %>
 </div>
 <br>
@@ -13,25 +14,42 @@
   <%= @booking.time_travel.name %>
 </p>
 
-<p>
-  <strong>Start Date:</strong>
-  <%= @booking.start_date %>
-</p>
 
-<p>
-  <strong>End Date:</strong>
-  <%= @booking.end_date %>
-</p>
-<%= link_to "Delete",
-    booking_path(@booking),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-</div>
-<div class="bookingimage">
-  <!-- Display the image associated with the Time Travel -->
-      <br>
-      <%= image_tag @booking.time_travel.image_url, class: "img-fluid1", alt: @booking.time_travel.name%>
-</div>
- </div>
-</div>
+  <div class="booking-details">
+    <br>
+    <p>
+      <strong>Time Travel:</strong>
+      <%= @booking.time_travel.name %>
+    </p>
+
+
+    <p>
+      <strong>Start Date:</strong>
+      <%= @booking.start_date %>
+    </p>
+
+    <p>
+      <strong>End Date:</strong>
+      <%= @booking.end_date %>
+    </p>
+
+    </p>
+
+    <% if @booking.time_travel.image_url.present? %>
+      <p>
+        <strong></strong>
+        <div class="bookingimage">
+            <!-- Display the image associated with the Time Travel -->
+          <br>
+          <%= image_tag @booking.time_travel.image_url, class: "img-fluid1", alt: @booking.time_travel.name%>
+        </div>
+      </p>
+    <% end %>
+
+    <%= link_to "Delete",
+        booking_path(@booking),
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }
+    %>
+  </div>
+
 </div>
