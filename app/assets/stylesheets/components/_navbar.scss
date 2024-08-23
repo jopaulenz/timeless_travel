@@ -15,7 +15,7 @@
 }
 
 .navbar-lewagon .navbar-brand {
-  color: #FFFFFF;
+  color: #FEFEFC;
 }
 
 /* Ensure the navbar is fixed at the top of the page */
@@ -26,7 +26,10 @@
   width: 100%;
   z-index: 1000; /* Ensures the navbar is on top of other content */
 }
-
+.navtext  {
+  font-family: "Raleway", sans-serif;
+  color: #DE4747;
+}
 /* Add some padding to the body to prevent content from being hidden behind the navbar */
 body {
   padding-top: 56px; /* Adjust based on the height of your navbar */
@@ -42,4 +45,3 @@ body {
   font-family: 'Pages Grotesque Demo', sans-serif;
   color: #DE4747;
 }
-

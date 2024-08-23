@@ -1,10 +1,13 @@
+<div class="container">
 <h1>Book Your Time Travel</h1>
-
+<div class="booking.container">
 <%= simple_form_for [@time_travel, @booking] do |f| %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date %>
 
-  <%= f.submit 'Book Now' %>
+  <%= f.submit 'Book Now'%>
 <% end %>
 
 <%= link_to 'Back to Time Travels', time_travels_path %>
+</div>
+</div>

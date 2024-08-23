@@ -6,12 +6,10 @@
   font-family: "Raleway", sans-serif;
   color: #FEFEFC;
   text-align: center;
-  padding-top: 5px;
 }
 .login-button:hover {
   background-color: #b12020;
   color: #FEFEFC;
-  font-family: "Raleway", sans-serif;
 }
 
 .info-button {
@@ -44,4 +42,15 @@
 .booking-button:hover {
   background-color: #b12020;
   color: #FEFEFC;
+}
+.btn-custom {
+  background-color: #DE4747;
+  border-radius: 8px;
+  width: 650px;
+  height: 48px;
+  font-family: "Raleway", sans-serif;
+  color: #FEFEFC;
+  text-align: center;
+  padding-top: 10px;
+  border: none;
 }
