@@ -1,10 +1,17 @@
 .login-button {
   background-color: #DE4747;
   border-radius: 8px;
-  width: 380px;
+  width: 440px;
   height: 48px;
   font-family: "Raleway", sans-serif;
   color: #FEFEFC;
+  text-align: center;
+  padding-top: 5px;
+}
+.login-button:hover {
+  background-color: #b12020;
+  color: #FEFEFC;
+  font-family: "Raleway", sans-serif;
 }
 
 .info-button {
