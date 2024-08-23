@@ -1,0 +1,31 @@
+<h1>Your Bookings</h1>
+
+<% if @bookings.any? %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>Time Travel</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.id %></td>
+          <td><%= booking.time_travel.name %></td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
+          <td>
+            <%= link_to 'Show', booking_path(booking), class: "btn btn-info" %>
+            <%= link_to 'Delete', booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You have no bookings.</p>
+<% end %>

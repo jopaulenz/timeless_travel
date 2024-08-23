@@ -3,6 +3,10 @@ class BookingsController < ApplicationController
   before_action :set_time_travel, only: [:new, :create]
   before_action :set_booking, only: [:show, :destroy]
 
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @booking = Booking.new
   end
