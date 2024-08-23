@@ -10,15 +10,15 @@
         <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= travel.name %></h5>
-          <p class="card-text">
-            <i class="fas fa-dollar-sign"></i> <%= travel.price %>
-            <span class="float-end"><i class="fas fa-star"></i> <%= travel.rating %></span>
-          </p>
-          <p class="description"><%= travel.description %></p>
-          <button class="btn info-button" type="button" data-bs-toggle="collapse" data-bs-target="#description-<%= travel.id %>" aria-expanded="false" aria-controls="description-<%= travel.id %>">
+            <p class="card-text">
+              <i class="fas fa-dollar-sign"></i> <%= travel.price %>
+              <span class="float-end"><i class="fas fa-star"></i> <%= travel.rating %></span>
+            </p>
+            <p class="description"><%= travel.description %></p>
+            <button class="btn info-button" type="button" data-bs-toggle="collapse" data-bs-target="#description-<%= travel.id %>" aria-expanded="false" aria-controls="description-<%= travel.id %>">
             More information
-          </button>
-          <div class="collapse mt-2" id="description-<%= travel.id %>">
+            </button>
+            <div class="collapse mt-2" id="description-<%= travel.id %>">
             <p class="card-text"><%= travel.detailed_description %></p>
           </div>
         </div>
