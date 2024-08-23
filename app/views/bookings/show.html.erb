@@ -21,6 +21,11 @@
   <%= @booking.end_date %>
 </p>
 
+  <!-- Display the image associated with the Time Travel -->
+    <p>
+      <strong>Image:</strong><br>
+      <%= image_tag @booking.time_travel.image_url, class: "img-fluid", alt: @booking.time_travel.name %>
+    </p>
 
  <%= link_to "Delete",
     booking_path(@booking),
