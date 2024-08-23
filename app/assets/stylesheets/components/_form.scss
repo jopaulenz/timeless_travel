@@ -2,5 +2,18 @@
   font-family: "Raleway", sans-serif;
 }
 .back {
-  text-decoration: non;
+    text-decoration: none;
+    padding: 20px;
+    // border-radius: 20px;
+    // border: solid;
+    // border-color:#DE4747;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    color: #DE4747;
+  }
+a {
+  text-decoration: none;
+  color: #DE4747;
 }
