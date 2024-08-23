@@ -27,6 +27,13 @@
   object-fit: cover;
 
 }
+.img-fluid1 {
+  width: 300px;
+  border-radius: 20px;
+  min-height: 200px;
+  object-fit: cover;
+
+}
 .rate-price {
   width: 550px;
   font-size: 26px;
@@ -46,7 +53,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.img-travel {
+.img-small {
   height: 100px;
 }
 .booking-details {

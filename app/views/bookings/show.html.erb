@@ -1,10 +1,12 @@
 <!-- app/views/bookings/show.html.erb -->
-<h1>Booking Details</h1>
 <div class="container">
+<h1>Booking Details</h1>
   <div class="back">
 <%= link_to '<- Back to Time Travels', time_travels_path %>
 </div>
-<div class="booking-details ">
+<br>
+<div class="booking-details  d-flex justify-content-between align-items-center mx-5">
+  <div class="bookinginfo">
 <br>
 <p>
   <strong>Time Travel:</strong>
@@ -20,17 +22,16 @@
   <strong>End Date:</strong>
   <%= @booking.end_date %>
 </p>
-
-  <!-- Display the image associated with the Time Travel -->
-    <p>
-      <strong>Image:</strong><br>
-      <%= image_tag @booking.time_travel.image_url, class: "img-fluid", alt: @booking.time_travel.name %>
-    </p>
-
- <%= link_to "Delete",
+<%= link_to "Delete",
     booking_path(@booking),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
-  </div>
+</div>
+<div class="bookingimage">
+  <!-- Display the image associated with the Time Travel -->
+      <br>
+      <%= image_tag @booking.time_travel.image_url, class: "img-fluid1", alt: @booking.time_travel.name%>
+</div>
+ </div>
 </div>
 </div>
