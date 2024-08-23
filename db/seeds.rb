@@ -191,7 +191,7 @@ time_travels = [
 ]
 
 time_travels.each do |travel|
-  TimeTravels.create!(
+  TimeTravel.create!(
     name: travel[:name],
     city: travel[:city],
     period: travel[:period],
