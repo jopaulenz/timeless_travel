@@ -4,10 +4,13 @@
 <%= simple_form_for [@time_travel, @booking] do |f| %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date %>
-
-  <%= f.submit 'Book Now'%>
+  <br>
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <%= f.submit 'Book Now', class: 'booking-button'%>
 <% end %>
+<br>
+<%= link_to 'Back to Time Travels', time_travels_path, class: 'back' %>
 
-<%= link_to 'Back to Time Travels', time_travels_path %>
+</div>
 </div>
 </div>
