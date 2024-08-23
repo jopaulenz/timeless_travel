@@ -1,6 +1,11 @@
 <!-- app/views/bookings/show.html.erb -->
 <h1>Booking Details</h1>
-
+<div class="container">
+  <div class="back">
+<%= link_to '<- Back to Time Travels', time_travels_path %>
+</div>
+<div class="booking-details ">
+<br>
 <p>
   <strong>Time Travel:</strong>
   <%= @booking.time_travel.name %>
@@ -17,9 +22,10 @@
 </p>
 
 
-<%= link_to 'Back to Time Travels', time_travels_path %>
-
  <%= link_to "Delete",
     booking_path(@booking),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
+  </div>
+</div>
+</div>
